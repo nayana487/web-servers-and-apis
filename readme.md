@@ -512,7 +512,7 @@ You can read more about it here: http://oauth.net/2/
 ### Python APIs
 
 1. form pairs and do the following
-- go to http://www.pythonapi.com/
+- go to http://www.pythonforbeginners.com/api/list-of-python-apis
 - choose 1 API: what data you can get?
 - install python module, try to extract data
 - discuss: how could you leverage that api? how could you use the data?
