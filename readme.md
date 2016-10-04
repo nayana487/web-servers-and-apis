@@ -792,10 +792,13 @@ ELSE they cannot vote
 We can express the pseudo-code above in Python as follows:
 
 ```python
+age_person = 25
+
 if age_person > 18:
-	return "They can vote"
+    print "They can vote"
 else:
-	return "They cannot vote"
+    print "They cannot vote"
+
 ```
 
 Let's see another example:
@@ -838,9 +841,6 @@ Let's see another example. Can you explain what the program is doing?
 ```python
 for x in [1,2,3]:
     print(x)
-
-for key, value in params.items():
-    print(key + " = " + str(value))
 ```
 
 #### **Functions**
@@ -862,9 +862,6 @@ Let us define a function that returns the square of the input value:
 
 ```python
 def square(x):
-	"""
-	Return the square of x.
-	"""
 	return x ** 2
 ```
 
