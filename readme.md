@@ -13,25 +13,15 @@
 
 ## Opening (5 mins)
 
-In previous classes we learned about building processes that scrape content from web-sites.  In this lesson we will be diving into the world of API's, but more specifically we will be taking a tour of one of the most accessible sources of data on the internet.
+In this lesson we will be diving into the world of API's, but more specifically we will be taking a tour of one of the most accessible sources of data on the internet.
 
 
 
 ## First, What is an API?
 
-An API (Application Programming Interface) is a set of routines, protocols, and tools for building software applications. It specifies how software components should interact.
+API stands for "Application Program Interface", and technically applies to all of software design. However, since the explosion of information technology, the term now commonly refers to web URLs that can be accessed for raw data.
 
-APIs are a way developers abstract functionality to data, devices, and other resources they provide.
-
-Some examples include:
-
-- Connectivity to a variety of databases
-- Python modules that can turn LED lights on and off
-- Application that runs on native Windows, OSX, or Linux
-- Libraries that post content on Twitter, Facebook, Yelp, or LinkedIn
-- Web services for accessing currency or stock prices
-
-APIs are a very common method to interact with data hosted by third parties and most commonly provided by Web Service API's
+APIs publish data for public use. As third-party software developers, we can access an organization's API and use their data within our own applications.
 
 ### Famous APIs:  Facebook
 
@@ -46,15 +36,6 @@ Facebook provides an API for interacting with their service.  At a glance:
 - View places traveled / check-ins
 - Relationships
 
-Potential Project Ideas:
-
-|   |   |   |   |
-|---|---|---|---|
-| Determining Latent Characteristics | Friends Activity | Political Classification | Text Mining |
-| Friend Classifier | Trending Topics | Recommenders | Feature Importances |
-| Taste Profiling | Hipster Detector | Sub-group Identification | Checkin-Prediction |
-| Relationship Forcasting | Relationship Classification | Sentiment Analysis | Popularity Projection |
-| Personal Analytics | Friend Similarity Prediction | N-Gram Analysis | Topic Modeling |
 
 ### Famous APIs:  Yelp
 
@@ -65,15 +46,6 @@ Yelp provides a way for developers to access:
  - Restaraunts / Bars / Cafes
  - Businesses
 - Business meta-data
-
-Potential Project Ideas
-
-|   |   |   |   |
-|---|---|---|---|
-| Topic Modeling | Text Mining | Sentiment Analysis | Funny / Cool / Interesting Classification |
-| Music Genre Classification | Parking Index Classification | Characteristics Profiling | Hipster Index |
-| Ideal Activities | Friend Recommender | Venue Recommender | Sports Bar Classifcation |
-| Where is the best [whatever] in [neighborhood] | | |
 
 ### Famouse APIs:  Echonest
 
@@ -102,8 +74,6 @@ Some Echonest features include:
 ## Web APIs
 
 The prevalance of web APIs have increased 10x with the rise of Javascript and advent of web programming techniques allowing the communication of small pieces of data, without having to refresh the entire page.
-
-![](https://snag.gy/ZsLvCz.jpg)
 
 With the growth of highly interactive websites, provided by AJAX programming techniques in Javascript, many languages started co-opting standards to communicate data to and from web servers mainly for two reasons:
 - Ease of integration
@@ -533,6 +503,8 @@ And here's an example of an unsuccessful `403 Forbidden` API call. Why did it fa
 ![Postman screenshot fail](http://i.imgur.com/r3nIhGH.png)
 
 ### Python Fundamentals
+
+In the next class, we'll be building our own APIs using the Python framework Django. Let's learn some Python fundamentals to get prepared.
 
 
 **What is Python?**
