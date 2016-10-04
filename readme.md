@@ -87,8 +87,6 @@ With the growth of highly interactive websites, provided by AJAX programming tec
 <a name="introduction"></a>
 ## Introduction
 
-In order to talk about APIs, we need first to introduce the _separation of concerns_. In computer science, _separation of concerns_ (SoC) is a design principle for separating a computer program into distinct sections, such that each section addresses a separate concern. A concern is a set of informations that affects the code of a computer program. In particular, when building a web application, it's best practice to separate the website logic from data models. This not only allows for cleaner code, but is an easier way to manipulate our layouts and interactions. Separation of concerns becomes ever more important when working with outside data.
-
 API calls are really a fancy term for making _HTTP requests_ to a server and sending/receiving structured data from that endpoint. We are still communicating with URLs, however instead of receiving markup, like we do with HTML pages, we receive data.
 
 Browsers have different "ways of talking" to servers. These are called methods. REST, or REpresentational State Transfer, is a convention for what these methods should be to standardize all the communication between browsers and servers.
