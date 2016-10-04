@@ -498,7 +498,7 @@ Here's an example of a successful `200 OK` API call...
 
 ![Postman screenshot success](http://i.imgur.com/2TADr4J.png)
 
-And here's an example of an unsuccessful `403 Forbidden` API call. Why did it fail?
+And here's an example of an unsuccessful `403 Forbidden` API call. 
 
 ![Postman screenshot fail](http://i.imgur.com/r3nIhGH.png)
 
