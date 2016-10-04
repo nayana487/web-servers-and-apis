@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Web Services & APIs
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Web Services, APIs & Python Fundamentals
 
 
 ### LEARNING OBJECTIVES
@@ -7,6 +7,7 @@
 - Describe APIs and how to make calls and consume API data.
 - Access public APIs and get information back.
 - Read and write data in JSON format
+- Understand Python Fundamentals
 
 
 
@@ -30,12 +31,7 @@ Some examples include:
 - Libraries that post content on Twitter, Facebook, Yelp, or LinkedIn
 - Web services for accessing currency or stock prices
 
-More abstract examples:
-- Adding your own functions to Numpy itself
-- Extending Python with C code
-- Testing Frameworks
-
-In the context of data science, APIs are a very common method to interact with data hosted by third parties and most commonly provided by Web Service API's
+APIs are a very common method to interact with data hosted by third parties and most commonly provided by Web Service API's
 
 ### Famous APIs:  Facebook
 
@@ -103,16 +99,20 @@ Some Echonest features include:
 - Concert Schedules and ticket metadata
 
 
+## Web APIs
 
-## Web API's
-
-The prevelance of web API's have increased 10x with the rise of Javascript and advent of web programming techniques allowing the communication of small pieces of data, without having to refresh the entire page.
+The prevalance of web APIs have increased 10x with the rise of Javascript and advent of web programming techniques allowing the communication of small pieces of data, without having to refresh the entire page.
 
 ![](https://snag.gy/ZsLvCz.jpg)
 
 With the growth of highly interactive websites, provided by AJAX programming techniques in Javascript, many languages started co-opting standards to communicate data to and from web servers mainly for two reasons:
 - Ease of integration
 - Consistent standards
+
+## You Do: Research APIs (15 minutes)
+1. Search for an API that interests you
+2. Read through the documentation to see what data is available to you
+3. Jot down three project ideas you'd be interested in pursuing using this API
 
 <a name="introduction"></a>
 ## Introduction
@@ -246,8 +246,6 @@ When a client sends a request, the server sends back a response; the standard fo
 
 * HTTP version should be 1.1
 
-> Instructor note: this could be optional:
->
 **[Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)** have standard meanings; here are a few.
 >
 |Code|Reason|
@@ -275,7 +273,7 @@ These are universal data structures. Virtually all modern programming languages 
 
 ##### Objects
 
-An object is an unordered set of name/value pairs, like python dictionaries. An object begins with `{` (left brace) and ends with `}` (right brace). Each name is followed by `:` (colon) and the name/value pairs are separated by `,` (comma).
+An object is an unordered set of name/value pairs. An object begins with `{` (left brace) and ends with `}` (right brace). Each name is followed by `:` (colon) and the name/value pairs are separated by `,` (comma).
 
 The syntax is as follows:
 
@@ -289,8 +287,7 @@ like:
 
 ##### Array
 
-**Check:** what is an array?
-> As we know, an array is an ordered collection of values. An array starts and ends with `[` and `]`. Between them, a number of values can reside. If there are more than one values reside, they are separated by `,`.
+An array is an ordered collection of values. An array starts and ends with `[` and `]`. Between them, a number of values can reside. If there are more than one values reside, they are separated by `,`.
 
 
 The syntax is as follows:
@@ -333,7 +330,7 @@ The internet movie database is a large collection of data about movies. It can b
 
 What if we wanted to programatically access the data in the database? Unless we are employees of IMDB.com, we probably don't have direct access to their internal database, so we cannot perform SQL queries on their data.
 
-We could use scraping to retrieve data from the web page, and in some cases we will have to do exactly that.
+We could use scraping, a software technique to extra data from the web page. In some cases, we will have to do exactly that.
 Note: check the "Terms of Service" before you scrape a website, you could be infringing their terms.
 
 In other cases, the website offers a way to programatically access data from their database. That's an API.
@@ -507,23 +504,458 @@ You can read more about it here: http://oauth.net/2/
 
 
 <a name="ind-practice_2/"></a>
-## Independent Practice: Python APIs (10 min)
+## Independent Practice: A Closer Look at an API Request (15 min)
 
-### Python APIs
+Let's make a basic HTTP request to an API. While we can technically just do this in the browser, we're going to use Postman - a Chrome plug-in for making HTTP requests - so we can look at it in more detail.  
+Steps  
+  1. [Download Postman](https://www.getpostman.com/).  
+  2. Type in the "url" of an API call.  
+  3. Ensure the "method" is "GET".  
+  4. Press "Send".  
 
-1. form pairs and do the following
-- go to http://www.pythonforbeginners.com/api/list-of-python-apis
-- choose 1 API: what data you can get?
-- install python module, try to extract data
-- discuss: how could you leverage that api? how could you use the data?
+There is an immense number of APIs out there from which you can pull data. Try these ones out.
 
-<a name="conclusion"></a>
-## Conclusion (5 min)
-Today we learned about HTTP, APIs and JSON formats. They are very important in order to systematically access data from the web.
+| API | Sample URL |
+|-----|------------|
+| **[This for That](http://itsthisforthat.com/)** | http://itsthisforthat.com/api.php?json |
+| **[iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)** | http://itunes.apple.com/search?term=adele |
+| **[Giphy](https://github.com/Giphy/GiphyAPI)** | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
+| **[OMDB API](http://www.omdbapi.com/)** | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1 |
+| **[StarWars](http://swapi.co/)** | http://swapi.co/api/people/3 |
+| **[Stocks](http://dev.markitondemand.com/MODApis/)** | http://dev.markitondemand.com/Api/Quote/json?symbol=AAPL |
 
-**Check:** can you think of a few websites you would like to pull data from? Can you check if they have an API available?
+Here's an example of a successful `200 OK` API call...
 
-### ADDITIONAL RESOURCES
+![Postman screenshot success](http://i.imgur.com/2TADr4J.png)
 
-- [API article Wikipedia](https://en.wikipedia.org/wiki/Application_programming_interface)
-- [Programmable web](http://www.programmableweb.com/)
+And here's an example of an unsuccessful `403 Forbidden` API call. Why did it fail?
+
+![Postman screenshot fail](http://i.imgur.com/r3nIhGH.png)
+
+### Python Fundamentals
+
+
+**What is Python?**
+
+- Python was created by Guido Van Rossum in 1991
+- Emphasizes **productivity** and **readability**
+	* The language is easy to pick up and learn
+	* This gentle learning curve brings makes it easier for many to contribute to production level code
+	* Readable code means that almost anyone can pick up a piece of code and understand what it is doing
+- Interpreted, object-oriented, high-level programming language with dynamic semantics
+	* **Interpreted**: Code implementations execute instructions without having to *compile* them into machine-language instruction.
+	* **Object-oriented** (OO): Instead of concentrating on isolated "actions", object-orientation enables us to focus on "objects" that contain data (attributes). Objects have specific procedures, known as methods (code) that can access and modify the attributes of the object.
+		* OO makes it easier to write and reuse code in other programs
+	* **High-level programming**: Related to the code readability mentioned earlier
+		* Python syntax is similar to English, which makes it easy to use and automate!
+	* **Dynamic semantics**: Once data has been specified, the machine must be instructed to perform operations on the data. Dynamic semantics provides flexibility at run-time.
+
+**So why Python?**
+
+* Python is extremely fun to develop in!
+* Everything can be done with Python!
+* If something can't be done, you can easily create an extension for it :)
+* Everything can not only be done, but it can be done **fast**. For example, a program that takes you weeks in C++ might only take you a day to write in Python.
+* Great for individual prototyping and commercial settings.
+* Because it is a modern, elegant, highest level language.
+* Because it is highly expressive, i.e., you will earn higher productivity.
+* Because it comes with "batteries included", i.e. libraries for whatever you want.
+* Because it is well documented and has a well-established and growing community.
+
+#### Python: shell vs scripts
+
+We can write code that is executed immediately by the Python interpreter by using a shell. This means we are able to "interact" with the results of the commands we pass. We can do this via :
+
+- **python shell**: A python shell has a similar look and feel to a regular terminal shell. You can launch a python shell with:
+
+```
+> python
+```
+
+In many cases you may want to execute a program and simply get our results without interacting with the code. In those cases, we would need to create a Python script. We can use any *plain text editor* of our choice and save the code in a `.py` file.
+
+#### Putting it all together
+
+Ok. Let's write a barebones script for our "Hello World!" program. Let's save this to a file called `hi.py`.
+
+How would we do this?
+
+> Answer
+```python
+print("Hello world!")
+```
+
+Now, to run our script by passing it as a Python command in our terminal, we would *also* need to write:
+
+```python
+> python hi.py
+```
+
+Voila! You've just run your first python script!!
+
+## Programming fundamentals
+
+Understanding core programming concepts and why they are used is just as important as knowing how to write code.
+
+Before we start, let's review some basic programming concepts:
+
+- **Syntax**: the syntax of a programming language is the set of rules that define the combinations of symbols that result in structured programs for that language.
+
+- **Variables**: A variable is a storage location and an associated symbolic name that contains a value (in other words, a known or unknown quantity or piece of information). Variables can be of different `types`.
+	- Strings
+	- Integers
+	- etc
+
+- **Data Structures**: Data structurse are a particular way of storing and organizing data in a computer so that it can be used efficiently. Some examples include:
+	- Lists
+	- Tuples
+	- Arrays
+	- Matrices
+	- Dataframes
+
+- **Control Structures**: A control structure is a block of programming that analyses variables and chooses a direction in which to go based on given parameters. The term flow control details the direction the program takes (which way program control “flows”). Hence it is the basic decision-making process in computing; flow control determines how a computer will respond when given certain conditions and parameters. Some typical structures include
+	- `If` statement
+	- `For` loop
+	- Functions
+
+The interrelationship of these elements make it possible for us to write programs that implement algorithms and solve problems!
+
+### You Do: Python Data Types (25 minutes)
+
+Read through this portion of the lesson and execute the commands using the Python shell or a `.py` file.
+
+#### Integers
+Integers are numeric values and can be stored, manipulated, and expressed inside variables without quotes.
+
+```bash
+23
+```
+and it returns:
+```bash
+23
+```
+
+```bash
+-44
+```
+and it returns:
+```bash
+-44
+```
+
+You can also perform basic math using integers as well. In iPython notebook type:
+```bash
+45-19
+```
+and it returns:
+```bash
+26
+```
+
+#### Strings
+Strings are a type. They are the basic unit of text in Python and all the other types except integers may contain strings.
+
+```bash
+"I love Darth Vader"
+```
+and it returns:
+```bash
+'I love Darth Vader'
+```
+
+You can also make a variable refer to a string. In iPython notebook type:
+```bash
+x= "Luke, I am your father"
+```
+Now type:
+```bash
+x
+```
+and it returns:
+```bash
+'Luke, I am your father'
+```
+Now type:
+```bash
+print(x)
+```
+and it returns:
+```bash
+Luke, I am your father
+```
+
+The print command prints the value that 'x' stands for on the screen. It removes the quotations. Whenever you type something into a type that isn't an integer, syntax (the commands that you give python, such as print), or variable (such as x just was) you need to put it into quotations. You can use 'single' or "double" quotations.
+
+#### Tuples
+A tuple is an unchangeable sequence of values.
+When you typed ('I love Python') you only included one element.
+In iPython notebook type:
+```bash
+x = ("Kirk", "Picard", "Spock")
+```
+When you do this you create a tuple with three elements. You can access these elements individually by typing the variable and the then inside brackets directly to the right of the variable type the number of the element to which you are referring.
+
+Now type:
+```bash
+print(x[1])
+```
+and it returns:
+```bash
+Picard
+```
+
+You may think that it is odd that it returned element 2 instead of element 1. The reason that it did this is because Python starts numbering at 0. element 1 = 0, element 2= 1, element 3= 2. You can also call on the elements in reverse order.
+
+Now type:
+```bash
+print(x[-1])
+```
+and it returns:
+```bash
+Spock
+```
+
+#### Lists
+A list is a changeable sequence of data. A list is contained by square brackets i.e. [1,2,3]
+
+```bash
+x = ["Lord", "of", "the", "Rings"]
+x[2] = "Frodo"
+print(x)
+```
+
+and it returns:
+```bash
+['Lord', 'of', 'Frodo', 'Rings']
+```
+
+The code above changes element number 2 in x.
+
+#### Dictionaries
+Dictionaries contain a key and a value. { } enclose dictionaries (Note, that you can also construct a set with curly brackets. The first input in a dictionary pair is the 'key'. The second input in a
+dictionary pair is the 'value'. The general format looks like this:
+key1:value1
+
+
+```bash
+x = {'key1':'value1', 'key2':'value2'}
+```
+
+Now type:
+```bash
+print(x)
+```
+
+These may not be in the exact order in which you typed them. The reason for the different order is because dictionaries have no order. You cannot type x[0] and be referring to 'key1':'value1' . What you do to refer to a value is type the key.
+
+```bash
+x[key1] = 'I love Python'
+```
+
+Now type:
+```bash
+print(x)
+```
+
+and it returns:
+```bash
+{'key2': 'value2', 'key1': 'value1', 'I love Python': 'I love Python'}
+```
+
+The keys stay the same but the values are changeable. You can also only have one occurrence of a key in a dictionary, but you may have the values all be the same.
+
+Now type:
+```bash
+x = {'key':'value1', 'key':'value2'}
+```
+
+Then type:
+```bash
+print(x)
+```
+
+and it returns:
+```bash
+{'key': 'value2'}
+```
+
+The first key is overwritten by the second.
+
+Now type:
+```bash
+x = {'key1':'value', 'key2':'value'}
+```
+
+Then type:
+```bash
+print(x)
+```
+
+and it returns:
+```bash
+{'key2': 'value', 'key1': 'value'}
+```
+
+This example shows that you can create two separate keys with the same value.
+
+[Integers, Strings, Tuples, Lists, Dictionaries](https://en.wikiversity.org/wiki/Python/Basic_data_types)
+
+**Check:** Define/describe: integer, string, tuple, list, dictionary
+
+### Control Flow
+
+* The term `control flow` details the direction the program takes (which way control “flows” through the program). In other words, it determines how a computer will respond when given certain conditions and parameters.
+
+#### **If**
+
+An `if` statement is a conditional structure that, if proved true, performs a function or displays information.
+
+Think of this as a decision that moves the flow of your program depending on the answer to a TRUE-FALSE question.
+
+```
+IF a person is older than 18
+THEN they can vote
+ELSE they cannot vote
+```
+
+We can express the pseudo-code above in Python as follows:
+
+```python
+if age_person > 18:
+	return "They can vote"
+else:
+	return "They cannot vote"
+```
+
+Let's see another example:
+
+```python
+A = 10
+B = 100
+if A>B:
+	print("A is larger than B")
+elif A==B:
+	print("A is equal to B")
+else:
+	print("A is smaller than B")
+```
+
+#### **For loop**
+
+A loop statement in programming performs a predefined set of instructions or tasks until a predetermined condition is met. Think of this as a repetitive action that has to be performed until a specific condition occurs.
+
+```
+FOR each user of a service in a list
+   PRINT greet them
+```
+
+In the pseudo-code above, the condition we are asked is to greet each user in a list. We stop the repetition when we reach the end of the list.
+
+We can express this loop in Python as follows:
+
+```python
+users = ["Jeff", "Jay", "Theresa"]
+
+for user in users:
+    print("Hello %s" % user)
+```
+
+**Tip**: When creating a `for` loop, make sure the condition will always be met in order to prevent an endless loop, which can crash your environment.
+
+Let's see another example. Can you explain what the program is doing?
+
+```python
+for x in [1,2,3]:
+    print(x)
+
+for key, value in params.items():
+    print(key + " = " + str(value))
+```
+
+#### **Functions**
+
+A function is a group of instructions, also known as a `named procedure`, used by programming languages to return a single result or a set of results.
+
+Functions are a convenient way to divide our code into useful blocks, providing us with order as well as making the code more readable and reusable.
+
+Here is how you define a function in python:
+
+```python
+def function_name(input1, input2...):
+    1st block of instructions
+    2nd block of instructions
+    ...
+```
+
+Let us define a function that returns the square of the input value:
+
+```python
+def square(x):
+	"""
+	Return the square of x.
+	"""
+	return x ** 2
+```
+
+We can call this function as follows:
+
+```python
+var1 = 7
+
+var2 = square(var1)
+
+print(var2)
+```
+## Independent Practice: More Python Practice (25 mins)
+
+<details>
+<summary>1. A recipe you are reading states how many grams you need for the ingredient. Unfortunately, your store only sells items in ounces. Create a program to convert grams to ounces.
+
+`ounces = 28.3495231 * grams`
+</summary>
+```python
+def gr2oz(x):
+	return 28.3495231 * x
+
+grams = 10
+ounces = gr2oz(grams)
+print(ounces)
+```
+</details>
+
+<details>
+<summary>
+2. Read in a Fahrenheit temperature. Calculate and display the equivalent centigrade temperature. The following formula is used for the conversion:
+
+`C = (5 / 9) * (F – 32)`
+</summary>
+```python
+def F2C(F):
+    return (5.0/9.0) * (F - 32)
+
+f=86
+c= F2C(f)
+
+print("{0} Fahrenheit is {1} centigrade".format(f,c))
+```
+</details>
+
+<details>
+<summary>
+3. Calculate the amount obtained by investing the principal P for N years at the rate of R. The following formula is used for the conversion:
+
+`A = P * (1 + R) ^ N`
+</summary>
+```python
+def compound_interest(P, R, N):
+    return P * (1 + R)**N
+
+P = 1000
+R = 0.1
+N = 2
+
+Interest = compound_interest(P, R, N)
+
+print(Interest)
+```
+</details>
