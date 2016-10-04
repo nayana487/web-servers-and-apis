@@ -91,7 +91,9 @@ In order to talk about APIs, we need first to introduce the _separation of conce
 
 API calls are really a fancy term for making _HTTP requests_ to a server and sending/receiving structured data from that endpoint. We are still communicating with URLs, however instead of receiving markup, like we do with HTML pages, we receive data.
 
-[Representational state transfer (REST)](http://stackoverflow.com/questions/551933/can-you-explain-the-web-concept-of-restful) is the most common architecture style for passing information to and from these API endpoints.
+Browsers have different "ways of talking" to servers. These are called methods. REST, or REpresentational State Transfer, is a convention for what these methods should be to standardize all the communication between browsers and servers.
+
+
 
 Before we start consuming these services however, it's important to understand the fundamentals of the underlying communication layer: HTTP.
 
