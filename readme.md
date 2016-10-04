@@ -91,7 +91,7 @@ In order to talk about APIs, we need first to introduce the _separation of conce
 
 API calls are really a fancy term for making _HTTP requests_ to a server and sending/receiving structured data from that endpoint. We are still communicating with URLs, however instead of receiving markup, like we do with HTML pages, we receive data.
 
-[Representational state transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer) is the most common architecture style for passing information to and from these API endpoints.
+[Representational state transfer (REST)](http://stackoverflow.com/questions/551933/can-you-explain-the-web-concept-of-restful) is the most common architecture style for passing information to and from these API endpoints.
 
 Before we start consuming these services however, it's important to understand the fundamentals of the underlying communication layer: HTTP.
 
@@ -548,11 +548,10 @@ In many cases you may want to execute a program and simply get our results witho
 
 #### Putting it all together
 
-Ok. Let's write a barebones script for our "Hello World!" program. Let's save this to a file called `hi.py`.
+Let's create and save a file called `hi.py`.
 
-How would we do this?
+And add the following code:
 
-> Answer
 ```python
 print("Hello world!")
 ```
