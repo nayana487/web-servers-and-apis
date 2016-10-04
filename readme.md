@@ -175,28 +175,6 @@ The first word in the request line, _GET_, is the **HTTP Request's Method**.
 
 Of these, **GET** and **POST** are the most widely used.
 
-**HTTP Request Structure:**
-
-```
-[http request method] [URL] [http version]  
-[list of headers]
-
-[request body]
-```
-
-*Notice, that the Request Header is separated from the Request Body by a new line.*
-
-
-**HTTP Request Method Example: (No Body)**
-
-    GET http://vermonster.com HTTP/1.1  
-    Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8  
-    Accept-Encoding:gzip,deflate,sdch
-    Accept-Language:en-US,en;q=0.8  
-    Connection:keep-alive  
-    Host:vermonster.com  
-    User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5)  
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1659.2 Safari/537.36  
 
 ### HTTP Response
 
@@ -232,8 +210,7 @@ When a client sends a request, the server sends back a response; the standard fo
 <a name="introduction_2"></a>
 ## JSON (10 min)  
 
-JSON is short for _JavaScript Object Notation_, and is a way to store information in an organized, easy-to-access manner. In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
-
+JSON is short for _JavaScript Object Notation_, and is a way to store information in an organized and easy to read format.
 JSON is built on two structures:
 
 * A collection of name/value pairs. In various languages, this is realized as an object, record, structure, dictionary, hash table, keyed list, or associative array.
