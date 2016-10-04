@@ -498,7 +498,7 @@ Here's an example of a successful `200 OK` API call...
 
 ![Postman screenshot success](http://i.imgur.com/2TADr4J.png)
 
-And here's an example of an unsuccessful `403 Forbidden` API call. 
+And here's an example of an unsuccessful `403 Forbidden` API call.
 
 ![Postman screenshot fail](http://i.imgur.com/r3nIhGH.png)
 
@@ -634,7 +634,7 @@ and it returns:
 'I love Darth Vader'
 ```
 
-You can also make a variable refer to a string. In iPython notebook type:
+You can also make a variable refer to a string.
 ```bash
 x= "Luke, I am your father"
 ```
@@ -660,7 +660,7 @@ The print command prints the value that 'x' stands for on the screen. It removes
 #### Tuples
 A tuple is an unchangeable sequence of values.
 When you typed ('I love Python') you only included one element.
-In iPython notebook type:
+
 ```bash
 x = ("Kirk", "Picard", "Spock")
 ```
