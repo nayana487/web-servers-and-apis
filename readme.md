@@ -43,7 +43,7 @@ Yelp provides a way for developers to access:
 
 - Reviews
  - Services
- - Restaraunts / Bars / Cafes
+ - Restaurants / Bars / Cafes
  - Businesses
 - Business meta-data
 
