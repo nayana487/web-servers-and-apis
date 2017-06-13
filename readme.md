@@ -626,8 +626,7 @@ And here's an example of an unsuccessful `403 Forbidden` API call.
 
 ### Python Fundamentals
 
-In the next class, we'll be building our own APIs using the Python framework Django. Let's learn some Python fundamentals to get prepared.
-
+Let's learn some Python fundamentals.
 
 **What is Python?**
 
