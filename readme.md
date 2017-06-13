@@ -288,7 +288,7 @@ In a browser paste:
     http://api.tvmaze.com/search/shows?q=westworld
 
 you should see something like:
-
+```
  [
 {
 "score": 29.58893,
@@ -459,7 +459,7 @@ you should see something like:
 }
 }
 ]
-
+```
 Notice what happened: we interrogated a url and we received json as an answer.
 
 2. Try submitting a couple more queries to familiarize with the API.
@@ -468,9 +468,9 @@ Notice what happened: we interrogated a url and we received json as an answer.
     curl http://api.tvmaze.com/search/shows?q=rick+and+morty
 
 you should see something like:
-
+```
 [{"score":41.22195,"show":{"id":216,"url":"http://www.tvmaze.com/shows/216/rick-and-morty","name":"Rick and Morty","type":"Animation","language":"English","genres":["Comedy","Adventure","Science-Fiction"],"status":"Running","runtime":30,"premiered":"2013-12-02","officialSite":"http://www.adultswim.com/videos/rick-and-morty","schedule":{"time":"21:00","days":["Saturday"]},"rating":{"average":9.4},"weight":98,"network":{"id":10,"name":"Adult Swim","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"externals":{"tvrage":33381,"thetvdb":275274,"imdb":"tt2861424"},"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/1/3603.jpg"},"summary":"<p>Rick is a mentally gifted, but sociopathic and alcoholic scientist and a grandfather to Morty; an awkward, impressionable, and somewhat spineless teenage boy. Rick moves into the family home of Morty, where he immediately becomes a bad influence.</p>","updated":1492825650,"_links":{"self":{"href":"http://api.tvmaze.com/shows/216"},"previousepisode":{"href":"http://api.tvmaze.com/episodes/1119144"}}}}]
-
+```
 
 ### Example 2: Google Geocode API
 
