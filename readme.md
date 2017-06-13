@@ -272,59 +272,204 @@ If you see "Valid JSON", click "Beautify" and you will see a more readable way o
 
 APIs are methods and data formats to tell people how to "talk" to a system. A couple of examples will clarify:
 
-### Example 1: Movies
-The internet movie database is a large collection of data about movies. It can be browsed at the address: http://www.imdb.com/.
+### Example 1: TV Shows
+The Tv Maze database is a large collection of data about television shows. It can be browsed at the address: http://www.tvmaze.com/api/.
 
-What if we wanted to programatically access the data in the database? Unless we are employees of IMDB.com, we probably don't have direct access to their internal database, so we cannot perform SQL queries on their data.
+What if we wanted to programatically access the data in the database? Unless we are employees of tvmaze.com, we probably don't have direct access to their internal database.
 
 We could use scraping, a software technique to extra data from the web page. In some cases, we will have to do exactly that.
 Note: check the "Terms of Service" before you scrape a website, you could be infringing their terms.
 
 In other cases, the website offers a way to programatically access data from their database. That's an API.
 
-In the case of movies, this is offered by http://www.omdbapi.com/
-
-
-1. Let's try for example to retrieve the data about the "Avengers" movie in 2015:
+1. Let's try for example to retrieve the data about the "Westworld" series: 
 
 In a browser paste:
-    http://www.omdbapi.com/?t=avengers&y=2015&plot=short&r=json
+    http://api.tvmaze.com/search/shows?q=westworld
 
 you should see something like:
 
-    {
-    Title: "Avengers: Age of Ultron",
-    Year: "2015",
-    Rated: "PG-13",
-    Released: "01 May 2015",
-    Runtime: "141 min",
-    Genre: "Action, Adventure, Sci-Fi",
-    Director: "Joss Whedon",
-    Writer: "Joss Whedon, Stan Lee (Marvel comics), Jack Kirby (Marvel comics)",
-    Actors: "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans",
-    Plot: "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans.",
-    Language: "English",
-    Country: "USA",
-    Awards: "2 wins & 37 nominations.",
-    Poster: "http://ia.media-imdb.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
-    Metascore: "66",
-    imdbRating: "7.5",
-    imdbVotes: "420,714",
-    imdbID: "tt2395427",
-    Type: "movie",
-    Response: "True"
-    }
+ [
+{
+"score": 29.58893,
+"show": {
+"id": 1371,
+"url": "http://www.tvmaze.com/shows/1371/westworld",
+"name": "Westworld",
+"type": "Scripted",
+"language": "English",
+"genres": [
+"Drama",
+"Science-Fiction",
+"Western"
+],
+"status": "Running",
+"runtime": 60,
+"premiered": "2016-10-02",
+"officialSite": "http://www.hbo.com/westworld",
+"schedule": {
+"time": "21:00",
+"days": [
+"Sunday"
+]
+},
+"rating": {
+"average": 8.9
+},
+"weight": 99,
+"network": {
+"id": 8,
+"name": "HBO",
+"country": {
+"name": "United States",
+"code": "US",
+"timezone": "America/New_York"
+}
+},
+"webChannel": null,
+"externals": {
+"tvrage": 37537,
+"thetvdb": 296762,
+"imdb": "tt0475784"
+},
+"image": {
+"medium": "http://static.tvmaze.com/uploads/images/medium_portrait/79/198046.jpg",
+"original": "http://static.tvmaze.com/uploads/images/original_untouched/79/198046.jpg"
+},
+"summary": "<p>The one-hour drama series <b>Westworld</b> is a dark odyssey about the dawn of artificial consciousness and the evolution of sin. Set at the intersection of the near future and the reimagined past, it explores a world in which every human appetite, no matter how noble or depraved, can be indulged.</p>",
+"updated": 1486381078,
+"_links": {
+"self": {
+"href": "http://api.tvmaze.com/shows/1371"
+},
+"previousepisode": {
+"href": "http://api.tvmaze.com/episodes/943067"
+}
+}
+}
+},
+{
+"score": 15.0131645,
+"show": {
+"id": 9702,
+"url": "http://www.tvmaze.com/shows/9702/beyond-westworld",
+"name": "Beyond Westworld",
+"type": "Scripted",
+"language": "English",
+"genres": [
+"Action",
+"Science-Fiction",
+"Thriller"
+],
+"status": "Ended",
+"runtime": 60,
+"premiered": "1980-03-05",
+"officialSite": null,
+"schedule": {
+"time": "",
+"days": []
+},
+"rating": {
+"average": null
+},
+"weight": 0,
+"network": {
+"id": 2,
+"name": "CBS",
+"country": {
+"name": "United States",
+"code": "US",
+"timezone": "America/New_York"
+}
+},
+"webChannel": null,
+"externals": {
+"tvrage": null,
+"thetvdb": 77993,
+"imdb": "tt0080198"
+},
+"image": {
+"medium": "http://static.tvmaze.com/uploads/images/medium_portrait/88/221428.jpg",
+"original": "http://static.tvmaze.com/uploads/images/original_untouched/88/221428.jpg"
+},
+"summary": "<p><b>Beyond Westworld </b>is a 1980 television series that carried on the stories of the two feature films, Westworld and Futureworld.</p><p>It featured Jim McMullan as Security Chief John Moore of the Delos Corporation. The story revolved around John Moore having to stop the evil scientist, Quaid, as he planned to use the robots in Delos to try to take over the world. Despite being nominated for two Emmys (Outstanding Achievement In Makeup, and Outstanding Art Direction for a Series), only five episodes were produced, and only three of them were aired before cancellation.</p>",
+"updated": 1481463822,
+"_links": {
+"self": {
+"href": "http://api.tvmaze.com/shows/9702"
+},
+"previousepisode": {
+"href": "http://api.tvmaze.com/episodes/520703"
+}
+}
+}
+},
+{
+"score": 3.5894606,
+"show": {
+"id": 23050,
+"url": "http://www.tvmaze.com/shows/23050/nextworld",
+"name": "NextWorld",
+"type": "Documentary",
+"language": "English",
+"genres": [],
+"status": "Ended",
+"runtime": 60,
+"premiered": "2008-08-06",
+"officialSite": null,
+"schedule": {
+"time": "20:00",
+"days": [
+"Thursday"
+]
+},
+"rating": {
+"average": null
+},
+"weight": 0,
+"network": {
+"id": 66,
+"name": "Discovery Channel",
+"country": {
+"name": "United States",
+"code": "US",
+"timezone": "America/New_York"
+}
+},
+"webChannel": null,
+"externals": {
+"tvrage": null,
+"thetvdb": 82754,
+"imdb": "tt1275286"
+},
+"image": {
+"medium": "http://static.tvmaze.com/uploads/images/medium_portrait/85/214397.jpg",
+"original": "http://static.tvmaze.com/uploads/images/original_untouched/85/214397.jpg"
+},
+"summary": "<p><b>NextWorld</b> reveals the science, the inventions and the innovations that seem impossible now, but will be a reality in our lifetimes. Imagine cities under the oceans, bionic suits, space tourism, superspeed trains, cyborg moths, windships, hoverbikes, somatic sensors, virtual reality, people living to 150 years old -- these may be just the dreams of today but they will shape the NextWorld.</p>",
+"updated": 1479833856,
+"_links": {
+"self": {
+"href": "http://api.tvmaze.com/shows/23050"
+},
+"previousepisode": {
+"href": "http://api.tvmaze.com/episodes/995491"
+}
+}
+}
+}
+]
 
 Notice what happened: we interrogated a url and we received json as an answer.
 
 2. Try submitting a couple more queries to familiarize with the API.
 - You can also query an API from the command line using the app `curl`. Try typing:
 
-    curl http://www.omdbapi.com/?t=whiplash&plot=short&r=json
+    curl http://api.tvmaze.com/search/shows?q=rick+and+morty
 
 you should see something like:
 
-    {"Title":"Whiplash","Year":"2014","Rated":"R","Released":"15 Oct 2014","Runtime":"107 min","Genre":"Drama, Music","Director":"Damien Chazelle","Writer":"Damien Chazelle","Actors":"Miles Teller, J.K. Simmons, Paul Reiser, Melissa Benoist","Plot":"A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.","Language":"English","Country":"USA","Awards":"Won 3 Oscars. Another 84 wins & 125 nominations.","Poster":"http://ia.media-imdb.com/images/M/MV5BMTU4OTQ3MDUyMV5BMl5BanBnXkFtZTgwOTA2MjU0MjE@._V1_SX300.jpg","Metascore":"88","imdbRating":"8.5","imdbVotes":"368,942","imdbID":"tt2582802","Type":"movie","Response":"True"}
+[{"score":41.22195,"show":{"id":216,"url":"http://www.tvmaze.com/shows/216/rick-and-morty","name":"Rick and Morty","type":"Animation","language":"English","genres":["Comedy","Adventure","Science-Fiction"],"status":"Running","runtime":30,"premiered":"2013-12-02","officialSite":"http://www.adultswim.com/videos/rick-and-morty","schedule":{"time":"21:00","days":["Saturday"]},"rating":{"average":9.4},"weight":98,"network":{"id":10,"name":"Adult Swim","country":{"name":"United States","code":"US","timezone":"America/New_York"}},"webChannel":null,"externals":{"tvrage":33381,"thetvdb":275274,"imdb":"tt2861424"},"image":{"medium":"http://static.tvmaze.com/uploads/images/medium_portrait/1/3603.jpg","original":"http://static.tvmaze.com/uploads/images/original_untouched/1/3603.jpg"},"summary":"<p>Rick is a mentally gifted, but sociopathic and alcoholic scientist and a grandfather to Morty; an awkward, impressionable, and somewhat spineless teenage boy. Rick moves into the family home of Morty, where he immediately becomes a bad influence.</p>","updated":1492825650,"_links":{"self":{"href":"http://api.tvmaze.com/shows/216"},"previousepisode":{"href":"http://api.tvmaze.com/episodes/1119144"}}}}]
 
 
 ### Example 2: Google Geocode API
